@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aethere | AETHERE</title>
+
+    <style>
+/* =========================
+   AETHERE BRAND SECTION
+========================= */
+
+.about-aethere,
+.mission,
+.process,
+.why-aethere{
+    padding:120px 8%;
+    background:#f7f7f7;
+}
+
+.container{
+    max-width:1400px;
+    margin:auto;
+}
+
+.section-tag{
+    display:block;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:3px;
+    color:#777;
+    margin-bottom:20px;
+    text-transform:uppercase;
+}
+
+.about-aethere h2,
+.mission h2,
+.process h2,
+.why-aethere h2{
+    font-size:clamp(42px,5vw,72px);
+    line-height:1.1;
+    font-weight:700;
+    margin-bottom:30px;
+    color:#111;
+    max-width:900px;
+}
+
+.intro{
+    max-width:800px;
+    font-size:18px;
+    line-height:1.9;
+    color:#666;
+    margin-bottom:70px;
+}
+
+.mission p{
+    max-width:850px;
+    font-size:18px;
+    line-height:1.9;
+    color:#666;
+}
+
+.aethere-grid,
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.aethere-card,
+.process-step{
+    background:#fff;
+    padding:40px;
+    border-radius:24px;
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.04);
+    transition:
+    transform .4s ease,
+    box-shadow .4s ease;
+}
+
+.aethere-card:hover,
+.process-step:hover{
+    transform:translateY(-10px);
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.08);
+}
+
+.aethere-card h3,
+.process-step h3{
+    font-size:24px;
+    margin-bottom:15px;
+    color:#111;
+}
+
+.aethere-card p,
+.process-step p{
+    color:#666;
+    line-height:1.8;
+}
+
+.process-step span{
+    display:block;
+    font-size:52px;
+    font-weight:700;
+    color:#ddd;
+    margin-bottom:20px;
+}
+
+/* =========================
+   PREMIUM DIVIDER
+========================= */
+
+.mission,
+.why-aethere{
+    border-top:1px solid #e5e5e5;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+.aethere-card,
+.process-step{
+    opacity:0;
+    transform:translateY(40px);
+    animation:fadeUp .8s ease forwards;
+}
+
+.aethere-card:nth-child(2),
+.process-step:nth-child(2){
+    animation-delay:.15s;
+}
+
+.aethere-card:nth-child(3),
+.process-step:nth-child(3){
+    animation-delay:.3s;
+}
+
+.aethere-card:nth-child(4),
+.process-step:nth-child(4){
+    animation-delay:.45s;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .about-aethere,
+    .mission,
+    .process,
+    .why-aethere{
+        padding:80px 7%;
+    }
+
+    .about-aethere h2,
+    .mission h2,
+    .process h2,
+    .why-aethere h2{
+        font-size:42px;
+    }
+
+    .intro,
+    .mission p{
+        font-size:16px;
+    }
+
+}
+</style>
+
+</head>
+
+<body>
+<section class="about-aethere">
+
+    <div class="container">
+
+        <span class="section-tag">
+            • ABOUT AETHERE
+        </span>
+
+        <h2>
+            Building Digital Solutions
+            That Matter
+        </h2>
+
+        <p class="intro">
+            AETHERE is a digital solutions brand focused on web
+            development, system design, and business automation.
+            We help individuals, startups, and organizations
+            transform ideas into practical digital products that
+            improve efficiency and support long-term growth.
+        </p>
+
+        <div class="aethere-grid">
+
+            <div class="aethere-card">
+                <h3>Web Development</h3>
+                <p>
+                    Modern and responsive websites designed to
+                    create professional digital experiences.
+                </p>
+            </div>
+
+            <div class="aethere-card">
+                <h3>System Development</h3>
+                <p>
+                    Custom systems that streamline workflows,
+                    manage data efficiently, and improve
+                    productivity.
+                </p>
+            </div>
+
+            <div class="aethere-card">
+                <h3>Business Solutions</h3>
+                <p>
+                    Technology-driven solutions tailored to
+                    operational challenges and business goals.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="mission">
+
+    <div class="container">
+
+        <span class="section-tag">
+            • OUR MISSION
+        </span>
+
+        <h2>
+            Turning Ideas Into
+            Functional Systems
+        </h2>
+
+        <p>
+            Our mission is to build digital solutions that are
+            practical, scalable, and aligned with real business
+            needs. Every project is designed with a focus on
+            usability, efficiency, and long-term value.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="process">
+
+    <div class="container">
+
+        <span class="section-tag">
+            • OUR PROCESS
+        </span>
+
+        <h2>
+            How We Build Solutions
+        </h2>
+
+        <div class="process-grid">
+
+            <div class="process-step">
+                <span>01</span>
+                <h3>Understand</h3>
+                <p>
+                    Analyze goals, challenges,
+                    and business requirements.
+                </p>
+            </div>
+
+            <div class="process-step">
+                <span>02</span>
+                <h3>Design</h3>
+                <p>
+                    Create structured solutions
+                    focused on usability.
+                </p>
+            </div>
+
+            <div class="process-step">
+                <span>03</span>
+                <h3>Build</h3>
+                <p>
+                    Develop reliable systems and
+                    digital experiences.
+                </p>
+            </div>
+
+            <div class="process-step">
+                <span>04</span>
+                <h3>Improve</h3>
+                <p>
+                    Optimize performance and
+                    continuously refine results.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="why-aethere">
+
+    <div class="container">
+
+        <span class="section-tag">
+            • WHY AETHERE
+        </span>
+
+        <h2>
+            More Than Development
+        </h2>
+
+        <div class="aethere-grid">
+
+            <div class="aethere-card">
+                <h3>Strategic Thinking</h3>
+                <p>
+                    Technology is built to solve
+                    problems, not just add features.
+                </p>
+            </div>
+
+            <div class="aethere-card">
+                <h3>Custom Solutions</h3>
+                <p>
+                    Every project is tailored to
+                    specific operational needs.
+                </p>
+            </div>
+
+            <div class="aethere-card">
+                <h3>Professional Execution</h3>
+                <p>
+                    Clean design, structured
+                    development, and reliable results.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+</body>
+</html>
