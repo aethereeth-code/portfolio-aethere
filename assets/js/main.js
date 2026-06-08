@@ -221,3 +221,13 @@ hamburger.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 
 });
+document.getElementById('backTop').addEventListener('click', function(e){
+
+    e.preventDefault();
+
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+
+});
