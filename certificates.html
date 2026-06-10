@@ -2,420 +2,184 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aethere | Rohandika</title>
 
-    <title>Certificates | AETHERE</title>
+    <link rel="stylesheet" href="assets/css/certificates.css">
 
-    <style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, Helvetica, sans-serif;
-        }
-
-        body{
-            background:#f7f7f7;
-            color:#111;
-        }
-
-        .container{
-            width:min(1400px,90%);
-            margin:auto;
-        }
-
-        /* NAVBAR */
-
-        nav{
-            position:fixed;
-            top:0;
-            width:100%;
-            background:rgba(255,255,255,.85);
-            backdrop-filter:blur(15px);
-            border-bottom:1px solid #e5e5e5;
-            z-index:1000;
-        }
-
-        .nav-wrapper{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            padding:20px 0;
-        }
-
-        .logo{
-            text-decoration:none;
-            color:#111;
-        }
-
-        .logo h2{
-            letter-spacing:4px;
-        }
-
-        .nav-links{
-            display:flex;
-            list-style:none;
-            gap:40px;
-        }
-
-        .nav-links a{
-            text-decoration:none;
-            color:#111;
-            transition:.3s;
-        }
-
-        .nav-links a:hover{
-            opacity:.6;
-        }
-
-        /* HERO */
-
-        .hero{
-            padding:180px 0 100px;
-        }
-
-        .section-tag{
-            display:block;
-            font-size:12px;
-            letter-spacing:3px;
-            color:#777;
-            margin-bottom:20px;
-        }
-
-        .hero h1{
-            font-size:clamp(60px,8vw,120px);
-            line-height:.9;
-            margin-bottom:30px;
-        }
-
-        .hero p{
-            max-width:800px;
-            line-height:1.9;
-            color:#666;
-        }
-
-        /* CERTIFICATES */
-
-        .certificates{
-            padding-bottom:120px;
-        }
-
-        .certificate-grid{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-            gap:35px;
-        }
-
-        .certificate-card{
-            background:#fff;
-            border-radius:24px;
-            overflow:hidden;
-            box-shadow:0 10px 30px rgba(0,0,0,.05);
-            transition:.4s;
-        }
-
-        .certificate-card:hover{
-            transform:translateY(-10px);
-        }
-
-        .certificate-image{
-            height:240px;
-            background:#ececec;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            color:#888;
-            font-weight:600;
-        }
-
-        .certificate-content{
-            padding:30px;
-        }
-
-        .certificate-content span{
-            font-size:12px;
-            letter-spacing:2px;
-            color:#888;
-        }
-
-        .certificate-content h3{
-            margin:15px 0;
-            font-size:24px;
-        }
-
-        .certificate-content p{
-            color:#666;
-            line-height:1.8;
-            margin-bottom:10px;
-        }
-
-        .certificate-content small{
-            color:#999;
-        }
-
-        /* LEARNING */
-
-        .learning{
-            padding:120px 0;
-            border-top:1px solid #ddd;
-        }
-
-        .learning h2{
-            font-size:clamp(40px,5vw,70px);
-            margin-bottom:30px;
-        }
-
-        .learning p{
-            max-width:850px;
-            color:#666;
-            line-height:1.9;
-        }
-
-        /* CTA */
-
-        .cta{
-            padding:120px 0;
-            text-align:center;
-        }
-
-        .cta h2{
-            font-size:clamp(40px,5vw,80px);
-            margin-bottom:20px;
-        }
-
-        .cta p{
-            max-width:700px;
-            margin:auto;
-            color:#666;
-            line-height:1.8;
-        }
-
-        .cta-btn{
-            display:inline-block;
-            margin-top:40px;
-            padding:16px 35px;
-            background:#111;
-            color:#fff;
-            text-decoration:none;
-            border-radius:50px;
-        }
-
-        /* FOOTER */
-
-        footer{
-            padding:60px 0;
-            border-top:1px solid #ddd;
-            text-align:center;
-        }
-
-        footer p{
-            color:#777;
-        }
-
-        @media(max-width:768px){
-
-            .nav-links{
-                display:none;
-            }
-
-            .certificate-content{
-                padding:25px;
-            }
-
-        }
-
-    </style>
-
+        <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
-    <nav>
+  <nav class="navbar">
 
-        <div class="container nav-wrapper">
+    <a href="aethere.html" class="logo">
+        <img src="assets/images/logo.png" alt="Aethere Logo">
+    </a>
 
-            <a href="index.html" class="logo">
-                <h2>AETHERE</h2>
-            </a>
+    <!-- HAMBURGER -->
+    <div class="hamburger">
 
-            <ul class="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
 
-                <li><a href="about.html">About</a></li>
+    </div>
 
-                <li><a href="projects.html">Projects</a></li>
+    <!-- MENU -->
+ <ul class="nav-links">
 
-                <li><a href="contact.html">Contact</a></li>
+    <li><a href="about.html">About</a></li>
 
-            </ul>
+    <li><a href="projects.html">Projects</a></li>
 
-        </div>
+    <li><a href="index.html">Home</a></li>
 
-    </nav>
+    <li><a href="contact.html">Contact</a></li>
 
-    <section class="hero">
+    <li class="mobile-social">
 
-        <div class="container">
+        <a href="https://github.com/aethereeth-code" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>
 
-            <span class="section-tag">
-                • CERTIFICATIONS
-            </span>
+        <a href="https://www.linkedin.com/in/rohandika-121b37414" target="_blank">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
 
-            <h1>
-                Certificates &
-                Professional Learning
-            </h1>
+        <a href="https://wa.me/628985493923" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
 
-            <p>
-                A collection of certifications, courses, and learning
-                experiences that support my growth in web development,
-                system design, and digital solutions.
-            </p>
+        <a href="https://www.instagram.com/aethereeth" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
 
-        </div>
+    </li>
 
-    </section>
+</ul>
 
-    <section class="certificates">
+    <!-- SOCIAL -->
+    <div class="social-links">
 
-        <div class="container">
+        <a href="https://github.com/aethereeth-code"
+           target="_blank">
 
-            <div class="certificate-grid">
+            <i class="fa-brands fa-github"></i>
 
-                <div class="certificate-card">
+        </a>
 
-                    <div class="certificate-image">
-                        CERTIFICATE IMAGE
-                    </div>
+        <a href="https://www.linkedin.com/in/rohandika-121b37414"
+           target="_blank">
 
-                    <div class="certificate-content">
+            <i class="fa-brands fa-linkedin-in"></i>
 
-                        <span>WEB DEVELOPMENT</span>
+        </a>
 
-                        <h3>Certificate Title</h3>
+        <a href="https://wa.me/628985493923"
+           target="_blank">
 
-                        <p>
-                            Issued by Institution Name
-                        </p>
+            <i class="fa-brands fa-whatsapp"></i>
 
-                        <small>2026</small>
+        </a>
 
-                    </div>
+        <a href="https://www.instagram.com/aethereeth"
+           target="_blank">
 
+            <i class="fa-brands fa-instagram"></i>
+
+        </a>
+
+    </div>
+
+</nav>
+
+
+<section class="certificates-section">
+
+    <div class="container">
+
+        <span class="section-tag">• CERTIFICATES</span>
+
+   <h1 class="cert-title">
+
+    <span class="title-top">
+        Achievements
+    </span>
+
+    <span class="title-bottom">
+        & Certifications.
+    </span>
+
+</h1>
+
+        <div class="cert-slider">
+
+            <div class="cert-track">
+    <div class="cert-row">
+                <div class="cert-card">
+                    <img src="assets/images/cert1.jpg" alt="">
                 </div>
 
-                <div class="certificate-card">
-
-                    <div class="certificate-image">
-                        CERTIFICATE IMAGE
-                    </div>
-
-                    <div class="certificate-content">
-
-                        <span>SYSTEM DEVELOPMENT</span>
-
-                        <h3>Certificate Title</h3>
-
-                        <p>
-                            Issued by Institution Name
-                        </p>
-
-                        <small>2026</small>
-
-                    </div>
-
+                <div class="cert-card">
+                    <img src="assets/images/cert2.jpg" alt="">
                 </div>
 
-                <div class="certificate-card">
-
-                    <div class="certificate-image">
-                        CERTIFICATE IMAGE
-                    </div>
-
-                    <div class="certificate-content">
-
-                        <span>UI / UX DESIGN</span>
-
-                        <h3>Certificate Title</h3>
-
-                        <p>
-                            Issued by Institution Name
-                        </p>
-
-                        <small>2026</small>
-
-                    </div>
-
+                <div class="cert-card">
+                    <img src="assets/images/cert3.jpg" alt="">
                 </div>
 
+                <div class="cert-card">
+                    <img src="assets/images/cert4.jpg" alt="">
+                </div>
+
+                <div class="cert-card">
+                    <img src="assets/images/cert5.jpg" alt="">
+                </div>
+</div>
             </div>
 
-        </div>
-
-    </section>
-
-    <section class="learning">
-
-        <div class="container">
-
-            <span class="section-tag">
-                • CONTINUOUS LEARNING
-            </span>
-
-            <h2>
-                Learning Never Stops
-            </h2>
-
-            <p>
-                Technology evolves continuously, and so does my
-                learning journey. I actively explore new tools,
-                frameworks, and development practices to improve
-                my skills and deliver better digital solutions.
-            </p>
+    
 
         </div>
 
-    </section>
+    </div>
 
-    <section class="cta">
+</section>
 
-        <div class="container">
+<!--FOOTER-->
+<footer class="footer">
+<a href="#" class="back-top" id="backTop">
+    <i class="fa-solid fa-chevron-up"></i>
+</a>
 
-            <h2>
-                Building Digital Solutions
-                Through Continuous Growth
-            </h2>
+    <div class="footer-content">
 
-            <p>
-                Every certificate represents a commitment to
-                improving knowledge, sharpening skills, and
-                delivering better results.
-            </p>
+        <p>© 2026 Aethere — Rohandika</p>
 
-            <a href="index.html" class="cta-btn">
-                BACK TO HOME
-            </a>
+        <div class="footer-links">
 
-        </div>
+            <a href="about.html">about</a>
 
-    </section>
+            <a href="projects.html">projects</a>
 
-    <footer>
+            <a href="certificates.html">certificates</a>
 
-        <div class="container">
-
-            <p>
-                © 2026 AETHERE Digital Solutions.
-                Building Digital Solutions That Matter.
-            </p>
+            <a href="contact.html">contact</a>
 
         </div>
 
-    </footer>
+    </div>
 
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 
 </html>

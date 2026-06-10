@@ -4,19 +4,23 @@
 
 const navbar = document.querySelector(".navbar");
 
-window.addEventListener("scroll", () => {
+if (navbar) {
 
-    if (window.scrollY > 30) {
+    window.addEventListener("scroll", () => {
 
-        navbar.classList.add("scrolled");
+        if (window.scrollY > 30) {
 
-    } else {
+            navbar.classList.add("scrolled");
 
-        navbar.classList.remove("scrolled");
+        } else {
 
-    }
+            navbar.classList.remove("scrolled");
 
-});
+        }
+
+    });
+
+}
 
 
 // ======================
@@ -27,13 +31,13 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
     link.addEventListener("click", function (e) {
 
-        e.preventDefault();
-
         const target = document.querySelector(
             this.getAttribute("href")
         );
 
         if (target) {
+
+            e.preventDefault();
 
             target.scrollIntoView({
 
@@ -139,21 +143,28 @@ buttons.forEach(button => {
 const scrollIndicator =
     document.querySelector(".scroll");
 
-window.addEventListener("scroll", () => {
+if (scrollIndicator) {
 
-    if (!scrollIndicator) return;
+    window.addEventListener("scroll", () => {
 
-    if (window.scrollY > 100) {
+        if (window.scrollY > 100) {
 
-        scrollIndicator.style.opacity = "0";
+            scrollIndicator.style.opacity = "0";
 
-    } else {
+        } else {
 
-        scrollIndicator.style.opacity = "1";
+            scrollIndicator.style.opacity = "1";
 
-    }
+        }
 
-});
+    });
+
+}
+
+
+// ======================
+// ACTIVE NAV
+// ======================
 
 document.querySelectorAll('.nav-links a').forEach(link => {
 
@@ -168,11 +179,18 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 
 });
 
+
+// ======================
+// MODAL
+// ======================
+
 const modal = document.getElementById('roleModal');
 const title = document.getElementById('roleTitle');
 const desc = document.getElementById('roleDescription');
 
 function showRole(type){
+
+    if(!modal || !title || !desc) return;
 
     modal.classList.add('active');
 
@@ -193,41 +211,205 @@ function showRole(type){
         'I create responsive, modern, and user-friendly websites using HTML, CSS, JavaScript, PHP, and MySQL. My focus is performance, clean code, and delivering practical solutions for real business needs.';
 
     }
+
 }
 
-document.querySelector('.close-modal').addEventListener('click', () => {
-    modal.classList.remove('active');
-});
+const closeBtn =
+    document.querySelector('.close-modal');
+
+if(closeBtn && modal){
+
+    closeBtn.addEventListener('click', () => {
+
+        modal.classList.remove('active');
+
+    });
+
+}
 
 window.addEventListener('click', (e) => {
-    if(e.target === modal){
+
+    if(modal && e.target === modal){
+
         modal.classList.remove('active');
+
     }
+
 });
 
 document.addEventListener('keydown', (e) => {
-    if(e.key === 'Escape'){
+
+    if(modal && e.key === 'Escape'){
+
         modal.classList.remove('active');
+
     }
-});
-
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
-
-hamburger.addEventListener("click", () => {
-
-    hamburger.classList.toggle("active");
-
-    navLinks.classList.toggle("active");
 
 });
-document.getElementById('backTop').addEventListener('click', function(e){
 
-    e.preventDefault();
 
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+// ======================
+// HAMBURGER
+// ======================
+
+const hamburger =
+    document.querySelector(".hamburger");
+
+const navLinks =
+    document.querySelector(".nav-links");
+
+if(hamburger && navLinks){
+
+    hamburger.addEventListener("click", () => {
+
+        hamburger.classList.toggle("active");
+
+        navLinks.classList.toggle("active");
+
     });
 
-});
+}
+
+
+// ======================
+// BACK TO TOP
+// ======================
+
+const backTop =
+    document.getElementById('backTop');
+
+if(backTop){
+
+    backTop.addEventListener('click', function(e){
+
+        e.preventDefault();
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: 'smooth'
+
+        });
+
+    });
+
+}
+
+
+// ======================
+// CERTIFICATES
+// ======================
+/* CERTIFICATES */
+
+const cards = document.querySelectorAll(".cert-card");
+
+if(cards.length){
+
+    let current = 2;
+
+    function updateCarousel(){
+
+        cards.forEach(card => {
+
+            card.classList.remove(
+                "active",
+                "left",
+                "right",
+                "far-left",
+                "far-right"
+            );
+
+        });
+
+        cards[current].classList.add("active");
+
+        cards[(current - 1 + cards.length) % cards.length]
+            .classList.add("left");
+
+        cards[(current - 2 + cards.length) % cards.length]
+            .classList.add("far-left");
+
+        cards[(current + 1) % cards.length]
+            .classList.add("right");
+
+        cards[(current + 2) % cards.length]
+            .classList.add("far-right");
+
+    }
+
+    function nextSlide(){
+
+        current = (current + 1) % cards.length;
+
+        updateCarousel();
+
+    }
+
+    function prevSlide(){
+
+        current = (current - 1 + cards.length) % cards.length;
+
+        updateCarousel();
+
+    }
+
+    updateCarousel();
+
+    /* AUTO PREMIUM */
+
+   autoPlay = setInterval(nextSlide, 2500);
+
+    /* DRAG */
+
+    let startX = 0;
+    let isDragging = false;
+
+    document.querySelector(".cert-slider")
+    ?.addEventListener("pointerdown", (e) => {
+
+        clearInterval(autoPlay);
+
+        isDragging = true;
+
+        startX = e.clientX;
+
+    });
+
+    document.addEventListener("pointermove", (e) => {
+
+        if(!isDragging) return;
+
+        const diff = e.clientX - startX;
+
+        if(diff > 80){
+
+            prevSlide();
+
+            startX = e.clientX;
+
+        }
+
+        else if(diff < -80){
+
+            nextSlide();
+
+            startX = e.clientX;
+
+        }
+
+    });
+
+    document.addEventListener("pointerup", () => {
+
+        if(!isDragging) return;
+
+        isDragging = false;
+
+        clearInterval(autoPlay);
+
+      autoPlay = setInterval(nextSlide, 2500);
+
+    });
+
+}

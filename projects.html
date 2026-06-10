@@ -4,390 +4,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | AETHERE</title>
+    <title>Aethere | Rohandika</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, Helvetica, sans-serif;
-        }
+    <link rel="stylesheet" href="assets/css/project.css">
 
-        body{
-            background:#f5f5f5;
-            color:#111;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-        .container{
-            width:min(1400px,90%);
-            margin:auto;
-        }
-
-        /* NAVBAR */
-
-        nav{
-            position:fixed;
-            top:0;
-            width:100%;
-            background:rgba(255,255,255,.85);
-            backdrop-filter:blur(15px);
-            border-bottom:1px solid #e5e5e5;
-            z-index:1000;
-        }
-
-        .nav-wrapper{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
-            padding:20px 0;
-        }
-
-        .logo{
-            text-decoration:none;
-            color:#111;
-        }
-
-        .logo h2{
-            letter-spacing:4px;
-        }
-
-        .nav-links{
-            display:flex;
-            gap:40px;
-            list-style:none;
-        }
-
-        .nav-links a{
-            text-decoration:none;
-            color:#111;
-        }
-
-        /* HERO */
-
-        .hero{
-            padding:180px 0 100px;
-        }
-
-        .tag{
-            color:#777;
-            letter-spacing:3px;
-            font-size:12px;
-        }
-
-        .hero h1{
-            font-size:clamp(60px,8vw,120px);
-            line-height:.9;
-            margin:20px 0;
-        }
-
-        .hero p{
-            max-width:800px;
-            color:#666;
-            line-height:1.9;
-            font-size:18px;
-        }
-
-        /* PROJECTS */
-
-        .projects{
-            padding-bottom:120px;
-        }
-
-        .projects-grid{
-            display:grid;
-            gap:40px;
-        }
-
-        .project-card{
-            background:white;
-            border-radius:24px;
-            overflow:hidden;
-            box-shadow:0 10px 30px rgba(0,0,0,.05);
-            transition:.4s;
-        }
-
-        .project-card:hover{
-            transform:translateY(-10px);
-        }
-
-        .project-image{
-            height:320px;
-            background:#e9e9e9;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            color:#888;
-            font-weight:600;
-        }
-
-        .project-content{
-            padding:40px;
-        }
-
-        .project-type{
-            font-size:12px;
-            letter-spacing:2px;
-            color:#888;
-        }
-
-        .project-content h3{
-            margin:15px 0;
-            font-size:32px;
-        }
-
-        .project-content p{
-            color:#666;
-            line-height:1.8;
-            margin-bottom:20px;
-        }
-
-        .project-content a{
-            text-decoration:none;
-            color:#111;
-            font-weight:600;
-        }
-
-        /* CTA */
-
-        .cta{
-            padding:120px 0;
-            text-align:center;
-        }
-
-        .cta h2{
-            font-size:clamp(40px,5vw,80px);
-            margin-bottom:20px;
-        }
-
-        .cta p{
-            max-width:700px;
-            margin:auto;
-            color:#666;
-            line-height:1.8;
-        }
-
-        .cta-btn{
-            display:inline-block;
-            margin-top:40px;
-            padding:16px 35px;
-            background:#111;
-            color:white;
-            text-decoration:none;
-            border-radius:50px;
-        }
-
-        /* FOOTER */
-
-        footer{
-            padding:60px 0;
-            border-top:1px solid #ddd;
-            text-align:center;
-        }
-
-        footer p{
-            color:#777;
-        }
-
-        @media(max-width:768px){
-
-            .nav-links{
-                display:none;
-            }
-
-            .project-content{
-                padding:25px;
-            }
-
-        }
-    </style>
-
+        <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
-    <nav>
+  <nav class="navbar">
 
-        <div class="container nav-wrapper">
+    <a href="aethere.html" class="logo">
+        <img src="assets/images/logo.png" alt="Aethere Logo">
+    </a>
 
-            <a href="index.html" class="logo">
-                <h2>AETHERE</h2>
-            </a>
+    <!-- HAMBURGER -->
+    <div class="hamburger">
 
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="web-developer.html">Web Developer</a></li>
-                <li><a href="system-builder.html">System Builder</a></li>
-            </ul>
+        <span></span>
+        <span></span>
+        <span></span>
 
-        </div>
+    </div>
 
-    </nav>
+    <!-- MENU -->
+ <ul class="nav-links">
 
-    <section class="hero">
+    <li><a href="about.html">About</a></li>
+    
+    <li><a href="index.html">Home</a></li>
 
-        <div class="container">
+    <li><a href="certificates.html">certificates</a></li>
 
-            <span class="tag">
-                • SELECTED WORK
-            </span>
+    <li><a href="contact.html">Contact</a></li>
 
-            <h1>
-                Projects &
-                Case Studies
-            </h1>
+    <li class="mobile-social">
 
-            <p>
-                A collection of websites, business systems,
-                and digital solutions designed to solve real-world
-                operational challenges through thoughtful design
-                and development.
-            </p>
+        <a href="https://github.com/aethereeth-code" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>
 
-        </div>
+        <a href="https://www.linkedin.com/in/rohandika-121b37414" target="_blank">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
 
-    </section>
+        <a href="https://wa.me/628985493923" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
 
-    <section class="projects">
+        <a href="https://www.instagram.com/aethereeth" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
 
-        <div class="container">
+    </li>
 
-            <div class="projects-grid">
+</ul>
 
-                <!-- PROJECT 1 -->
+    <!-- SOCIAL -->
+    <div class="social-links">
 
-                <div class="project-card">
+        <a href="https://github.com/aethereeth-code"
+           target="_blank">
 
-                    <div class="project-image">
-                        PROJECT IMAGE
-                    </div>
+            <i class="fa-brands fa-github"></i>
 
-                    <div class="project-content">
+        </a>
 
-                        <span class="project-type">
-                            SYSTEM DEVELOPMENT
-                        </span>
+        <a href="https://www.linkedin.com/in/rohandika-121b37414"
+           target="_blank">
 
-                        <h3>
-                            Project Title
-                        </h3>
+            <i class="fa-brands fa-linkedin-in"></i>
 
-                        <p>
-                            Brief description of the project,
-                            challenges, objectives, and solutions.
-                        </p>
+        </a>
 
-                        <a href="#">
-                            View Details →
-                        </a>
+        <a href="https://wa.me/628985493923"
+           target="_blank">
 
-                    </div>
+            <i class="fa-brands fa-whatsapp"></i>
 
-                </div>
+        </a>
 
-                <!-- PROJECT 2 -->
+        <a href="https://www.instagram.com/aethereeth"
+           target="_blank">
 
-                <div class="project-card">
+            <i class="fa-brands fa-instagram"></i>
 
-                    <div class="project-image">
-                        PROJECT IMAGE
-                    </div>
+        </a>
 
-                    <div class="project-content">
+    </div>
 
-                        <span class="project-type">
-                            WEB DEVELOPMENT
-                        </span>
+</nav>
 
-                        <h3>
-                            Project Title
-                        </h3>
 
-                        <p>
-                            Brief description of the project,
-                            challenges, objectives, and solutions.
-                        </p>
 
-                        <a href="#">
-                            View Details →
-                        </a>
 
-                    </div>
+<!--FOOTER-->
+<footer class="footer">
+<a href="#" class="back-top" id="backTop">
+    <i class="fa-solid fa-chevron-up"></i>
+</a>
 
-                </div>
+    <div class="footer-content">
 
-                <!-- PROJECT 3 -->
+        <p>© 2026 Aethere — Rohandika</p>
 
-                <div class="project-card">
+        <div class="footer-links">
 
-                    <div class="project-image">
-                        PROJECT IMAGE
-                    </div>
+            <a href="about.html">about</a>
 
-                    <div class="project-content">
+            <a href="projects.html">projects</a>
 
-                        <span class="project-type">
-                            BUSINESS SOLUTION
-                        </span>
+            <a href="certificates.html">certificates</a>
 
-                        <h3>
-                            Project Title
-                        </h3>
-
-                        <p>
-                            Brief description of the project,
-                            challenges, objectives, and solutions.
-                        </p>
-
-                        <a href="#">
-                            View Details →
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
+            <a href="contact.html">contact</a>
 
         </div>
 
-    </section>
+    </div>
 
-    <section class="cta">
+</footer>
 
-        <div class="container">
-
-            <h2>
-                Let's Build Something Great
-            </h2>
-
-            <p>
-                Looking for a website, business system,
-                or custom digital solution?
-                Let's discuss your project.
-            </p>
-
-            <a href="index.html#contact" class="cta-btn">
-                CONTACT ME
-            </a>
-
-        </div>
-
-    </section>
-
-    <footer>
-
-        <div class="container">
-
-            <p>
-                © 2026 AETHERE Digital Solutions.
-                Building Digital Solutions That Matter.
-            </p>
-
-        </div>
-
-    </footer>
-
+<script src="assets/js/main.js"></script>
 </body>
 
 </html>

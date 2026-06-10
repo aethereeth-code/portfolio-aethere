@@ -4,334 +4,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | AETHERE</title>
+    <title>Aethere | Rohandika</title>
 
-    <style>
-        /* =========================
-   ABOUT PAGE
-========================= */
+    <link rel="stylesheet" href="assets/css/about.css">
 
-.about-page,
-.journey,
-.expertise,
-.vision{
-    padding:120px 8%;
-}
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
-.container{
-    max-width:1400px;
-    margin:auto;
-}
-
-.section-tag{
-    display:block;
-    font-size:12px;
-    font-weight:600;
-    letter-spacing:3px;
-    text-transform:uppercase;
-    color:#777;
-    margin-bottom:20px;
-}
-
-.about-page h1{
-    font-size:clamp(60px,8vw,120px);
-    line-height:.9;
-    margin-bottom:15px;
-    color:#111;
-}
-
-.about-page h3{
-    font-size:24px;
-    font-weight:500;
-    color:#666;
-    margin-bottom:40px;
-}
-
-.about-intro{
-    max-width:850px;
-    font-size:18px;
-    line-height:1.9;
-    color:#666;
-}
-
-.journey{
-    border-top:1px solid #e5e5e5;
-}
-
-.journey h2,
-.expertise h2,
-.vision h2{
-    font-size:clamp(42px,5vw,72px);
-    line-height:1.1;
-    margin-bottom:30px;
-    color:#111;
-    max-width:900px;
-}
-
-.journey p,
-.vision p{
-    max-width:850px;
-    font-size:18px;
-    line-height:1.9;
-    color:#666;
-    margin-bottom:25px;
-}
-
-/* =========================
-   EXPERTISE
-========================= */
-
-.expertise-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-    margin-top:50px;
-}
-
-.card{
-    background:#fff;
-    padding:40px;
-    border-radius:24px;
-    box-shadow:0 10px 30px rgba(0,0,0,.05);
-    transition:.4s ease;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 20px 50px rgba(0,0,0,.08);
-}
-
-.card h3{
-    font-size:24px;
-    margin-bottom:15px;
-    color:#111;
-}
-
-.card p{
-    color:#666;
-    line-height:1.8;
-}
-
-/* =========================
-   SECTION DIVIDER
-========================= */
-
-.expertise,
-.vision{
-    border-top:1px solid #e5e5e5;
-}
-
-/* =========================
-   FADE ANIMATION
-========================= */
-
-.about-page,
-.journey,
-.expertise,
-.vision{
-    animation:fadeUp .8s ease;
-}
-
-@keyframes fadeUp{
-
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media(max-width:768px){
-
-    .about-page,
-    .journey,
-    .expertise,
-    .vision{
-        padding:80px 7%;
-    }
-
-    .about-page h1{
-        font-size:56px;
-    }
-
-    .about-page h3{
-        font-size:20px;
-    }
-
-    .journey h2,
-    .expertise h2,
-    .vision h2{
-        font-size:42px;
-    }
-
-    .about-intro,
-    .journey p,
-    .vision p{
-        font-size:16px;
-    }
-
-    .card{
-        padding:30px;
-    }
-
-}
-    </style>
+        <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
-<section class="about-page">
+  <nav class="navbar">
 
-    <div class="container">
+    <a href="aethere.html" class="logo">
+        <img src="assets/images/logo.png" alt="Aethere Logo">
+    </a>
 
-        <span class="section-tag">
-            • ABOUT
-        </span>
+    <!-- HAMBURGER -->
+    <div class="hamburger">
 
-        <h1>
-            Rohan Dika
-        </h1>
-
-        <h3>
-            Founder of AETHERE Digital Solutions
-        </h3>
-
-        <p class="about-intro">
-
-            I am a web developer and system builder passionate about
-            creating practical digital solutions that solve real-world
-            problems. Through AETHERE, I focus on developing websites,
-            business systems, and technology-driven solutions that help
-            individuals and organizations improve efficiency and grow
-            in the digital era.
-
-        </p>
+        <span></span>
+        <span></span>
+        <span></span>
 
     </div>
 
-</section>
+    <!-- MENU -->
+ <ul class="nav-links">
 
-<section class="journey">
+    <li><a href="index.html">Home</a></li>
 
-    <div class="container">
+    <li><a href="projects.html">Projects</a></li>
 
-        <span class="section-tag">
-            • MY JOURNEY
-        </span>
+    <li><a href="certificates.html">Certificates</a></li>
 
-        <h2>
-            From Business Experience
-            to Digital Solutions
-        </h2>
+    <li><a href="contact.html">Contact</a></li>
 
-        <p>
+    <li class="mobile-social">
 
-            My journey began through various business experiences,
-            where I learned the importance of systems, efficiency,
-            and problem-solving. Those experiences led me to the
-            world of web development and system design.
+        <a href="https://github.com/aethereeth-code" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>
 
-        </p>
+        <a href="https://www.linkedin.com/in/rohandika-121b37414" target="_blank">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
 
-        <p>
+        <a href="https://wa.me/628985493923" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
 
-            Today, I combine technical skills and practical business
-            understanding to build websites and systems that deliver
-            real value rather than simply adding features.
+        <a href="https://www.instagram.com/aethereeth" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
 
-        </p>
+    </li>
+
+</ul>
+
+    <!-- SOCIAL -->
+    <div class="social-links">
+
+        <a href="https://github.com/aethereeth-code"
+           target="_blank">
+
+            <i class="fa-brands fa-github"></i>
+
+        </a>
+
+        <a href="https://www.linkedin.com/in/rohandika-121b37414"
+           target="_blank">
+
+            <i class="fa-brands fa-linkedin-in"></i>
+
+        </a>
+
+        <a href="https://wa.me/628985493923"
+           target="_blank">
+
+            <i class="fa-brands fa-whatsapp"></i>
+
+        </a>
+
+        <a href="https://www.instagram.com/aethereeth"
+           target="_blank">
+
+            <i class="fa-brands fa-instagram"></i>
+
+        </a>
 
     </div>
 
-</section>
+</nav>
 
-<section class="expertise">
+<section class="about-section">
 
-    <div class="container">
+    <div class="about-grid">
 
-        <span class="section-tag">
-            • EXPERTISE
-        </span>
+        <div class="about-text">
 
-        <h2>
-            What I Do
-        </h2>
+            <h1>about.</h1>
 
-        <div class="expertise-grid">
+         <p class="intro">
+    I'm a web developer and system builder based in Indonesia.
+</p>
 
-            <div class="card">
+<p>
+    I build websites and digital systems that solve real problems,
+    focusing on clean design, functionality, and user experience.
+    Beyond coding, I enjoy learning new things, staying active,
+    and exploring business opportunities.
+</p>
 
-                <h3>Web Development</h3>
+        </div>
 
-                <p>
-                    Developing responsive websites with modern
-                    technologies and clean user experiences.
-                </p>
+        <div class="about-image">
 
-            </div>
-
-            <div class="card">
-
-                <h3>System Building</h3>
-
-                <p>
-                    Creating custom systems that streamline
-                    operations and improve productivity.
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>Business Solutions</h3>
-
-                <p>
-                    Designing technology solutions based on
-                    real business needs and workflows.
-                </p>
-
-            </div>
+            <img src="assets/images/profile2.png" alt="Rohandika">
 
         </div>
 
     </div>
 
-</section>
+    <div class="memory-gallery">
 
-<section class="vision">
-
-    <div class="container">
-
-        <span class="section-tag">
-            • VISION
-        </span>
-
-        <h2>
-            Building Digital
-            Solutions That Matter
-        </h2>
-
-        <p>
-
-            My goal is to help businesses and individuals leverage
-            technology effectively through websites, systems, and
-            digital solutions that are practical, scalable, and
-            focused on long-term impact.
-
-        </p>
+        <img src="assets/images/childhood.jpg" alt="">
+        <img src="assets/images/school.jpg" alt="">
+        <img src="assets/images/current.jpg" alt="">
+        <img src="assets/images/work.jpg" alt="">
+        <img src="assets/images/gym.jpg" alt="">
+        <img src="assets/images/family.jpg" alt="">
 
     </div>
 
 </section>
 
+<footer class="footer">
+<a href="#" class="back-top" id="backTop">
+    <i class="fa-solid fa-chevron-up"></i>
+</a>
+
+    <div class="footer-content">
+
+        <p>© 2026 Aethere — Rohandika</p>
+
+        <div class="footer-links">
+
+            <a href="about.html">about</a>
+
+            <a href="projects.html">projects</a>
+
+            <a href="certificates.html">certificates</a>
+
+            <a href="contact.html">contact</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
+
 </html>
