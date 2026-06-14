@@ -15,8 +15,11 @@
 .mission,
 .process,
 .why-aethere{
-    padding:120px 8%;
+    padding:85px 8%;
     background:#f7f7f7;
+
+    position:relative;
+    overflow:hidden;
 }
 
 .container{
@@ -73,18 +76,25 @@
     background:#fff;
     padding:40px;
     border-radius:24px;
+
     box-shadow:
-    0 10px 30px rgba(0,0,0,.04);
+        0 10px 30px rgba(0,0,0,.04);
+
     transition:
-    transform .4s ease,
-    box-shadow .4s ease;
+        transform .5s cubic-bezier(.22,1,.36,1),
+        box-shadow .5s ease;
+
+    will-change:transform;
 }
 
 .aethere-card:hover,
 .process-step:hover{
-    transform:translateY(-10px);
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
     box-shadow:
-    0 20px 50px rgba(0,0,0,.08);
+        0 25px 60px rgba(0,0,0,.10);
 }
 
 .aethere-card h3,
@@ -116,72 +126,216 @@
 .why-aethere{
     border-top:1px solid #e5e5e5;
 }
-
 /* =========================
-   ANIMATION
+   BACK TO HOME
 ========================= */
 
-.aethere-card,
-.process-step{
-    opacity:0;
-    transform:translateY(40px);
-    animation:fadeUp .8s ease forwards;
+.back-home{
+    padding:60px 8% 70px;
+
+    background:#111;
+
+    color:#fff;
+
+    text-align:center;
+
+    margin-top:-1px;
 }
 
-.aethere-card:nth-child(2),
-.process-step:nth-child(2){
-    animation-delay:.15s;
+.back-home h2{
+    font-size:clamp(42px,5vw,72px);
+
+    line-height:1.1;
+
+    margin-bottom:25px;
 }
 
-.aethere-card:nth-child(3),
-.process-step:nth-child(3){
-    animation-delay:.3s;
+.back-home p{
+    max-width:550px;
+
+    margin:0 auto 35px;
+
+    color:rgba(255,255,255,.7);
+
+    line-height:1.7;
+
+    font-size:17px;
 }
 
-.aethere-card:nth-child(4),
-.process-step:nth-child(4){
-    animation-delay:.45s;
+.home-btn{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:15px 32px;
+
+    border-radius:999px;
+
+    background:#fff;
+
+    color:#111;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.15);
 }
 
-@keyframes fadeUp{
+.home-btn:hover{
+    transform:
+        translateY(-6px);
 
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.2);
 }
 
+.home-btn span{
+    transition:transform .4s ease;
+}
+
+.home-btn:hover span{
+    transform:
+        translateX(4px)
+        translateY(-4px);
+}
 /* =========================
    RESPONSIVE
 ========================= */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
+    /* SECTION SPACING */
     .about-aethere,
     .mission,
     .process,
     .why-aethere{
-        padding:80px 7%;
+        padding:60px 7%;
     }
 
+    /* TITLE */
     .about-aethere h2,
     .mission h2,
     .process h2,
     .why-aethere h2{
-        font-size:42px;
+        font-size:34px;
+        line-height:1.2;
+        margin-bottom:20px;
     }
 
+    /* TAG */
+    .section-tag{
+        font-size:11px;
+        letter-spacing:2px;
+        margin-bottom:15px;
+    }
+
+    /* INTRO & PARAGRAPH */
     .intro,
     .mission p{
-        font-size:16px;
+        font-size:15px;
+        line-height:1.8;
+        margin-bottom:40px;
     }
 
+    /* CARD GRID */
+    .aethere-grid,
+    .process-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    /* CARD */
+    .aethere-card,
+    .process-step{
+        padding:30px 25px;
+        border-radius:20px;
+    }
+
+    .aethere-card h3,
+    .process-step h3{
+        font-size:20px;
+        margin-bottom:12px;
+    }
+
+    .aethere-card p,
+    .process-step p{
+        font-size:14px;
+        line-height:1.8;
+    }
+
+    /* PROCESS NUMBER */
+    .process-step span{
+        font-size:42px;
+        margin-bottom:15px;
+    }
+
+    /* BACK HOME */
+    .back-home{
+        padding:55px 7%;
+            display:flex;
+    flex-direction:column;
+    align-items:center;
+    }
+
+    .back-home h2{
+        font-size:32px;
+        line-height:1.2;
+        margin-bottom:15px;
+    }
+
+    .back-home p{
+        font-size:14px;
+        line-height:1.8;
+        margin-bottom:25px;
+    }
+
+  .home-btn{
+    width:auto;
+
+    display:inline-flex;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:14px 28px;
+
+    font-size:15px;
+
+    margin:0 auto;
+}
+
+}
+
+.reveal-title,
+.aethere-card,
+.process-step{
+
+    opacity:0;
+
+    transform:
+        translateY(40px);
+
+    transition:
+        opacity .9s ease,
+        transform .9s cubic-bezier(.22,1,.36,1);
+}
+
+.reveal-title.show,
+.aethere-card.show,
+.process-step.show{
+
+    opacity:1;
+
+    transform:
+        translateY(0);
 }
 </style>
 
@@ -195,8 +349,7 @@
         <span class="section-tag">
             • ABOUT AETHERE
         </span>
-
-        <h2>
+<h2 class="reveal-title">
             Building Digital Solutions
             That Matter
         </h2>
@@ -251,7 +404,7 @@
             • OUR MISSION
         </span>
 
-        <h2>
+      <h2 class="reveal-title">
             Turning Ideas Into
             Functional Systems
         </h2>
@@ -276,7 +429,7 @@
             • OUR PROCESS
         </span>
 
-        <h2>
+    <h2 class="reveal-title">
             How We Build Solutions
         </h2>
 
@@ -333,7 +486,7 @@
             • WHY AETHERE
         </span>
 
-        <h2>
+        <h2 class="reveal-title">
             More Than Development
         </h2>
 
@@ -368,5 +521,55 @@
     </div>
 
 </section>
+<section class="back-home">
+
+    <div class="container">
+
+        <span class="section-tag">
+            • RETURN
+        </span>
+
+        <h2>
+            Ready to Explore More?
+        </h2>
+
+        <p>
+            Discover projects, certifications, and the journey behind AETHERE.
+        </p>
+
+        <a href="index.html" class="home-btn">
+            Back to Home
+            <span>↗</span>
+        </a>
+
+    </div>
+
+</section>
+<script>
+const observer = new IntersectionObserver((entries)=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add('show');
+
+        }
+
+    });
+
+},{
+    threshold:.15
+});
+
+document.querySelectorAll(
+    '.aethere-card, .process-step, .reveal-title'
+).forEach(el=>{
+
+    observer.observe(el);
+});
+
+
+</script>   
 </body>
 </html>

@@ -9,227 +9,598 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        body {
-            background: #f5f5f5;
-            color: #111;
-            font-family: Arial, sans-serif;
-        }
+       body{
+    background:#f7f7f7;
+    color:#111;
+    font-family:'Poppins',sans-serif;
+}
 
-        .hero-page {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 120px 10%;
-        }
+.container{
+    max-width:1400px;
+    margin:auto;
+}
 
-        .hero-content {
-            max-width: 800px;
-        }
+/* HERO */
 
-        .hero-content span {
-            font-size: 13px;
-            letter-spacing: 3px;
-            color: #777;
-        }
+.hero-builder{
+    padding:120px 8% 90px;
+}
 
-        .hero-content h1 {
-            font-size: 90px;
-            line-height: .9;
-            margin: 20px 0;
-        }
+.hero-builder span{
+    display:block;
 
-        .hero-content p {
-            color: #666;
-            line-height: 1.8;
-            max-width: 700px;
-        }
+    font-size:12px;
 
-        .section {
-            padding: 100px 10%;
-        }
+    letter-spacing:3px;
 
-        .section h2 {
-            font-size: 42px;
-            margin-bottom: 40px;
-        }
+    color:#777;
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-            gap: 30px;
-        }
+    margin-bottom:25px;
+}
 
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,.05);
-        }
+.hero-builder h1{
+    font-size:clamp(60px,9vw,120px);
 
-        .card h3 {
-            margin-bottom: 15px;
-        }
+    line-height:.9;
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
+    margin-bottom:30px;
+}
 
-        .skills span {
-            background: white;
-            padding: 12px 20px;
-            border-radius: 50px;
-            box-shadow: 0 5px 20px rgba(0,0,0,.05);
-        }
+.hero-builder p{
+    max-width:750px;
 
-        .back-btn {
-            display: inline-block;
-            margin-top: 40px;
-            text-decoration: none;
-            color: white;
-            background: #111;
-            padding: 15px 30px;
-            border-radius: 50px;
-        }
+    color:#666;
+
+    line-height:1.9;
+
+    font-size:18px;
+}
+
+/* SECTION */
+
+.builder-section{
+    padding:85px 8%;
+}
+
+.builder-section.border{
+    border-top:1px solid #e5e5e5;
+}
+
+.builder-section h2{
+    font-size:clamp(42px,5vw,72px);
+
+    line-height:1.1;
+
+    margin-bottom:50px;
+}
+
+/* GRID */
+
+.builder-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+}
+
+/* CARD */
+
+.builder-card{
+    background:#fff;
+
+    padding:40px;
+
+    border-radius:24px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.04);
+
+    transition:
+        transform .5s cubic-bezier(.22,1,.36,1),
+        box-shadow .5s ease;
+}
+
+.builder-card:hover{
+
+    transform:
+        translateY(-10px);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.08);
+}
+
+.builder-card h3{
+    font-size:24px;
+
+    margin-bottom:15px;
+}
+
+.builder-card p{
+    color:#666;
+
+    line-height:1.8;
+}
+
+/* SKILLS */
+
+.skills{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+}
+
+.skills span{
+    background:#fff;
+
+    padding:14px 22px;
+
+    border-radius:50px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.04);
+
+    transition:.3s;
+}
+
+.skills span:hover{
+    transform:translateY(-5px);
+}
+
+/* REVEAL */
+
+.reveal{
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.22,1,.36,1);
+}
+
+.reveal.show{
+    opacity:1;
+
+    transform:translateY(0);
+}
+.return-home{
+    padding:70px 8% 90px;
+    text-align:center;
+    background:#f7f7f7;
+    border-top:1px solid #e5e5e5;
+}
+
+.return-home h2{
+    font-size:clamp(36px,4vw,56px);
+    margin:20px 0;
+    color:#111;
+}
+
+.return-home p{
+    max-width:550px;
+    margin:0 auto 35px;
+    color:#666;
+    line-height:1.8;
+}
+
+.return-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+
+    padding:16px 34px;
+
+    border:1px solid #111;
+    border-radius:999px;
+
+    text-decoration:none;
+
+    color:#111;
+    background:#fff;
+
+    font-weight:600;
+
+    transition:.35s ease;
+}
+
+.return-btn:hover{
+    background:#111;
+    color:#fff;
+
+    transform:translateY(-4px);
+}
+
+.return-btn span{
+    transition:.35s ease;
+}
+
+.return-btn:hover span{
+    transform:translateX(4px);
+}
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .hero-builder{
+        padding:90px 7% 60px;
+    }
+
+    .hero-builder h1{
+        font-size:60px;
+    }
+
+    .hero-builder p{
+        font-size:15px;
+    }
+
+    .builder-section{
+        padding:60px 7%;
+    }
+
+    .builder-section h2{
+        font-size:34px;
+
+        margin-bottom:35px;
+    }
+
+    .builder-grid{
+        grid-template-columns:1fr;
+
+        gap:20px;
+    }
+
+    .builder-card{
+        padding:30px 25px;
+    }
+
+    .builder-card h3{
+        font-size:20px;
+    }
+
+    .skills{
+        gap:12px;
+    }
+
+    .skills span{
+        font-size:14px;
+
+        padding:12px 18px;
+    }
+
+     .return-home{
+        padding:55px 7% 70px;
+    }
+
+    .return-home h2{
+        font-size:32px;
+    }
+
+    .return-home p{
+        font-size:15px;
+    }
+
+  .return-btn{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:16px 34px;
+
+    border:1px solid #111;
+
+    border-radius:999px;
+
+    background:#fff;
+
+    color:#111;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.35s ease;
+}
+
+.return-btn:hover{
+    background:#111;
+    color:#fff;
+
+    transform:translateY(-4px);
+}
+
+.return-btn span{
+    transition:.35s ease;
+}
+
+.return-btn:hover span{
+    transform:translateX(4px);
+}
+}
     </style>
 </head>
 
 <body>
 
-<section class="hero-page">
+<!-- HERO -->
+<section class="hero-builder">
 
-    <div class="hero-content">
+    <div class="container">
 
-        <span>• SYSTEM DEVELOPMENT</span>
+        <span class="section-tag">
+            • SYSTEM DEVELOPMENT
+        </span>
 
-        <h1>
+        <h1 class="reveal">
             SYSTEM<br>
             BUILDER
         </h1>
 
-        <p>
+        <p class="reveal">
             Designing and developing custom business systems
             that simplify operations, improve efficiency,
             and support long-term business growth through
             practical digital solutions.
         </p>
 
-        <a href="index.html" class="back-btn">
-            BACK TO HOME
+    </div>
+
+</section>
+
+
+<!-- WHAT I BUILD -->
+<section class="builder-section border">
+
+    <div class="container">
+
+        <span class="section-tag">
+            • WHAT I BUILD
+        </span>
+
+        <h2 class="reveal">
+            Practical Systems
+            For Real Operations
+        </h2>
+
+        <div class="builder-grid">
+
+            <div class="builder-card reveal">
+
+                <h3>Inventory Systems</h3>
+
+                <p>
+                    Monitor stock levels, transactions,
+                    and inventory movements efficiently.
+                </p>
+
+            </div>
+
+            <div class="builder-card reveal">
+
+                <h3>Membership Systems</h3>
+
+                <p>
+                    Manage members, subscriptions,
+                    attendance, and reporting.
+                </p>
+
+            </div>
+
+            <div class="builder-card reveal">
+
+                <h3>QR Code Solutions</h3>
+
+                <p>
+                    Attendance verification,
+                    access control, and tracking systems.
+                </p>
+
+            </div>
+
+            <div class="builder-card reveal">
+
+                <h3>Business Systems</h3>
+
+                <p>
+                    Custom platforms tailored to
+                    operational workflows and requirements.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CORE CAPABILITIES -->
+<section class="builder-section border">
+
+    <div class="container">
+
+        <span class="section-tag">
+            • CAPABILITIES
+        </span>
+
+        <h2 class="reveal">
+            Core
+            Capabilities
+        </h2>
+
+        <div class="skills reveal">
+
+            <span>System Analysis</span>
+
+            <span>Database Design</span>
+
+            <span>Workflow Mapping</span>
+
+            <span>Process Automation</span>
+
+            <span>User Management</span>
+
+            <span>Reporting Systems</span>
+
+            <span>QR Integration</span>
+
+            <span>RFID Integration</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FEATURED SOLUTIONS -->
+<section class="builder-section border">
+
+    <div class="container">
+
+        <span class="section-tag">
+            • FEATURED SOLUTIONS
+        </span>
+
+        <h2 class="reveal">
+            Systems Built
+            For Growth
+        </h2>
+
+        <div class="builder-grid">
+
+            <div class="builder-card reveal">
+
+                <h3>Gym Membership Management</h3>
+
+                <p>
+                    Member registration, attendance tracking,
+                    package management, and reporting dashboard.
+                </p>
+
+            </div>
+
+            <div class="builder-card reveal">
+
+                <h3>Inventory Management</h3>
+
+                <p>
+                    Product tracking, stock monitoring,
+                    transaction history, and analytics.
+                </p>
+
+            </div>
+
+            <div class="builder-card reveal">
+
+                <h3>Attendance System</h3>
+
+                <p>
+                    QR Code and RFID-based attendance
+                    monitoring with automated reports.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY CUSTOM SYSTEMS -->
+<section class="builder-section border">
+
+    <div class="container">
+
+        <span class="section-tag">
+            • WHY CUSTOM SYSTEMS
+        </span>
+
+        <h2 class="reveal">
+            Built Around
+            Your Workflow
+        </h2>
+
+        <p class="reveal"
+           style="
+                max-width:850px;
+                color:#666;
+                line-height:1.9;
+                font-size:18px;
+           ">
+
+            Every business has unique processes and
+            requirements. A custom-built system allows
+            workflows to be optimized according to actual
+            operational needs, resulting in better
+            efficiency, accuracy, and scalability.
+
+        </p>
+
+    </div>
+
+</section>  
+
+<section class="return-home">
+
+    <div class="container">
+
+        <span class="section-tag">
+            • RETURN
+        </span>
+
+        <h2 class="reveal">
+            Explore More
+        </h2>
+
+        <p class="reveal">
+            Continue exploring AETHERE and discover
+            other projects and experiences.
+        </p>
+
+        <a href="index.html" class="return-btn reveal">
+            Back to Home
+            <span>↗</span>
         </a>
 
     </div>
 
 </section>
 
-<section class="section">
+<script>
+const observer = new IntersectionObserver((entries)=>{
 
-    <h2>What I Build</h2>
+    entries.forEach(entry=>{
 
-    <div class="grid">
+        if(entry.isIntersecting){
 
-        <div class="card">
-            <h3>Inventory Systems</h3>
-            <p>
-                Monitor stock levels, transactions,
-                and inventory movements efficiently.
-            </p>
-        </div>
+            entry.target.classList.add('show');
 
-        <div class="card">
-            <h3>Membership Systems</h3>
-            <p>
-                Manage members, subscriptions,
-                attendance, and reporting.
-            </p>
-        </div>
+        }
 
-        <div class="card">
-            <h3>QR Code Solutions</h3>
-            <p>
-                Attendance verification,
-                access control, and tracking systems.
-            </p>
-        </div>
+    });
 
-        <div class="card">
-            <h3>Business Systems</h3>
-            <p>
-                Custom platforms tailored to
-                operational workflows and requirements.
-            </p>
-        </div>
+},{
+    threshold:.15
+});
 
-    </div>
+document.querySelectorAll('.reveal')
+.forEach((el,index)=>{
 
-</section>
+    el.style.transitionDelay =
+        `${index * 80}ms`;
 
-<section class="section">
+    observer.observe(el);
 
-    <h2>Core Capabilities</h2>
-
-    <div class="skills">
-
-        <span>System Analysis</span>
-        <span>Database Design</span>
-        <span>Workflow Mapping</span>
-        <span>Process Automation</span>
-        <span>User Management</span>
-        <span>Reporting Systems</span>
-        <span>QR Integration</span>
-        <span>RFID Integration</span>
-
-    </div>
-
-</section>
-
-<section class="section">
-
-    <h2>Featured Solutions</h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <h3>Gym Membership Management</h3>
-            <p>
-                Member registration, attendance tracking,
-                package management, and reporting dashboard.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Inventory Management</h3>
-            <p>
-                Product tracking, stock monitoring,
-                transaction history, and analytics.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Attendance System</h3>
-            <p>
-                QR Code and RFID-based attendance
-                monitoring with automated reports.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-<section class="section">
-
-    <h2>Why Custom Systems?</h2>
-
-    <p style="max-width:800px;color:#666;line-height:1.9;">
-        Every business has unique processes and requirements.
-        A custom-built system allows workflows to be optimized
-        according to actual operational needs, resulting in
-        better efficiency, accuracy, and scalability.
-    </p>
-
-</section>
-
+});
+</script>
 </body>
 </html>

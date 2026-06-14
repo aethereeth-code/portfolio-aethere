@@ -306,7 +306,7 @@ const cards = document.querySelectorAll(".cert-card");
 
 if(cards.length){
 
-    let current = 2;
+let current = 0;
 
     function updateCarousel(){
 

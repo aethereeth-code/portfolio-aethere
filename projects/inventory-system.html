@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .case-study-section{
+    padding:120px 0;
+}
+
+.case-title{
+    font-size:48px;
+    margin:20px 0;
+}
+
+.case-subtitle{
+    max-width:700px;
+    color:#666;
+    line-height:1.8;
+    margin-bottom:80px;
+}
+
+.feature-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:center;
+    margin-bottom:120px;
+}
+
+.feature-row.reverse .feature-image{
+    order:2;
+}
+
+.feature-row.reverse .feature-content{
+    order:1;
+}
+
+.feature-image img{
+    width:100%;
+    border-radius:32px;
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.feature-image img:hover{
+    transform:translateY(-10px);
+}
+
+.feature-content span{
+    font-size:14px;
+    letter-spacing:4px;
+    color:#999;
+}
+
+.feature-content h3{
+    font-size:38px;
+    margin:20px 0;
+}
+
+.feature-content p{
+    color:#666;
+    line-height:1.9;
+    margin-bottom:30px;
+}
+
+.feature-content ul{
+    list-style:none;
+    padding:0;
+}
+
+.feature-content li{
+    margin-bottom:14px;
+    color:#444;
+}
+
+.feature-content li::before{
+    content:"✓";
+    margin-right:12px;
+    color:#9b5d2f;
+    font-weight:700;
+}
+
+@media(max-width:992px){
+
+    .feature-row,
+    .feature-row.reverse{
+
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .feature-row.reverse .feature-image,
+    .feature-row.reverse .feature-content{
+
+        order:unset;
+    }
+
+    .case-title{
+        font-size:36px;
+    }
+
+    .feature-content h3{
+        font-size:30px;
+    }
+}
+    </style>
+</head>
+<body>
+    <section class="case-study-section">
+
+    <div class="container">
+
+        <span class="section-tag">
+            • SYSTEM FEATURES
+        </span>
+
+        <h2 class="case-title">
+            Inside The Inventory System
+        </h2>
+
+        <p class="case-subtitle">
+            Explore how DAD Petshop Inventory System streamlines stock
+            management through an integrated dashboard, QR technology,
+            and transaction monitoring.
+        </p>
+
+        <!-- DASHBOARD -->
+        <div class="feature-row">
+
+            <div class="feature-image">
+
+                <img src="assets/images/dashboard-petshop.jpg"
+                     alt="Dashboard">
+
+            </div>
+
+            <div class="feature-content">
+
+                <span>01</span>
+
+                <h3>Dashboard Monitoring</h3>
+
+                <p>
+                    Dashboard menyediakan ringkasan informasi penting
+                    seperti total jenis barang, jumlah transaksi
+                    barang masuk, barang keluar, serta total stok
+                    yang tersedia secara real-time.
+                </p>
+
+                <ul>
+
+                    <li>Total Barang</li>
+                    <li>Total Barang Masuk</li>
+                    <li>Total Barang Keluar</li>
+                    <li>Total Stok Tersedia</li>
+                    <li>Riwayat Transaksi Terbaru</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- DATA BARANG -->
+        <div class="feature-row reverse">
+
+            <div class="feature-image">
+
+                <img src="assets/images/data-barang.jpg"
+                     alt="Data Barang">
+
+            </div>
+
+            <div class="feature-content">
+
+                <span>02</span>
+
+                <h3>Data Barang Management</h3>
+
+                <p>
+                    Fitur ini digunakan untuk mengelola seluruh
+                    informasi produk yang tersedia di petshop,
+                    mulai dari penambahan, perubahan, hingga
+                    penghapusan data barang.
+                </p>
+
+                <ul>
+
+                    <li>Tambah Barang</li>
+                    <li>Edit Data Barang</li>
+                    <li>Hapus Barang</li>
+                    <li>Pencarian Barang</li>
+                    <li>Monitoring Stok</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- SCAN QR -->
+        <div class="feature-row">
+
+            <div class="feature-image">
+
+                <img src="assets/images/scan-qr.jpg"
+                     alt="Scan QR">
+
+            </div>
+
+            <div class="feature-content">
+
+                <span>03</span>
+
+                <h3>QR Code Scanner</h3>
+
+                <p>
+                    Sistem mendukung proses identifikasi barang
+                    menggunakan QR Code sehingga input transaksi
+                    dapat dilakukan dengan lebih cepat dan akurat.
+                </p>
+
+                <ul>
+
+                    <li>Scan QR Produk</li>
+                    <li>Identifikasi Otomatis</li>
+                    <li>Meminimalkan Human Error</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- BARANG MASUK -->
+        <div class="feature-row reverse">
+
+            <div class="feature-image">
+
+                <img src="assets/images/barang-masuk.jpg"
+                     alt="Barang Masuk">
+
+            </div>
+
+            <div class="feature-content">
+
+                <span>04</span>
+
+                <h3>Barang Masuk</h3>
+
+                <p>
+                    Seluruh proses penambahan stok dicatat
+                    secara otomatis untuk menjaga keakuratan
+                    jumlah persediaan barang.
+                </p>
+
+                <ul>
+
+                    <li>Riwayat Barang Masuk</li>
+                    <li>Jumlah Barang</li>
+                    <li>Tanggal Transaksi</li>
+                    <li>Update Stok Otomatis</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- BARANG KELUAR -->
+        <div class="feature-row">
+
+            <div class="feature-image">
+
+                <img src="assets/images/barang-masuk.jpg"
+                     alt="Barang Keluar">
+
+            </div>
+
+            <div class="feature-content">
+
+                <span>05</span>
+
+                <h3>Barang Keluar</h3>
+
+                <p>
+                    Sistem mencatat setiap pengurangan stok
+                    akibat penjualan sehingga admin dapat
+                    memonitor pergerakan barang dengan baik.
+                </p>
+
+                <ul>
+
+                    <li>Riwayat Barang Keluar</li>
+                    <li>Monitoring Penjualan</li>
+                    <li>Kontrol Persediaan</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+</body>
+</html>
