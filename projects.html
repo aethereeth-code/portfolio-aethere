@@ -276,7 +276,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
             <!-- GYM -->
             <a href="gymrth.html"
                class="project-card"
-                 data-category="system new">
+                 data-category="system"
+                  data-date="2026-06-10"> >
+                 
 
                 <div class="project-image">
 
@@ -311,7 +313,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
             <!-- QR -->
             <a href="qr-attendance.html"
                class="project-card"
-               data-category="system">
+               data-category="website"
+                data-date="2026-06-10"> >
 
                 <div class="project-image">
 
@@ -324,10 +327,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
                     <div>
 
-                        <h3>QR Attendance</h3>
+                        <h3>Abanawest Company Profile</h3>
 
                         <p>
-                            PHP • QR Code • Verification | 2026
+                             HTML • CSS • JavaScript | 2026
                         </p>
 
                     </div>
@@ -346,7 +349,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
             <!-- COMPANY -->
             <a href="company-profile.html"
                class="project-card"
-               data-category="website">
+               data-category="website"
+                data-date="2026-06-10"> >
 
                 <div class="project-image">
 
@@ -527,6 +531,51 @@ document.addEventListener("DOMContentLoaded", () => {
     ).click();
 
 });
+
+/* LOAD MORE */
+if (loadMore) {
+
+    loadMore.addEventListener("click", () => {
+
+        const hiddenProjects =
+            document.querySelectorAll(
+                ".hidden-project"
+            );
+
+        let shown = 0;
+
+        hiddenProjects.forEach(project => {
+
+            if (
+                project.classList.contains("hidden-project")
+                && shown < 3
+            ) {
+
+                project.classList.remove(
+                    "hidden-project"
+                );
+
+                project.style.display = "";
+
+                shown++;
+
+            }
+
+        });
+
+        if (
+            document.querySelectorAll(
+                ".hidden-project"
+            ).length === 0
+        ) {
+
+            loadMore.style.display = "none";
+
+        }
+
+    });
+
+}
 </script>
 <script src="assets/js/main.js"></script>
 </body>
